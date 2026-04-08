@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/svg+xml" href="files2026/AIFlow.svg">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TeleAI's AI Flow framework aims for ubiquitous intelligence in the era of large foundation models">
+
+
+    <title>IEEE GLOBECOM 2026 Workshop on AI Flow</title>
+
+    <!-- Consolidated CSS (loads Bootstrap, fonts, theme) -->
+    <link href="./files2026/combined.css" rel="stylesheet" type="text/css">
+    <style>
+        .navbar>.container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .navbar .navbar-header {
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        .navbar .navbar-brand {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 0;
+            margin-right: 24px;
+            white-space: nowrap;
+            font-size: 22px;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .navbar .navbar-collapse {
+            width: auto !important;
+            flex: 1 1 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .navbar .navbar-nav {
+            float: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .navbar .navbar-nav>li {
+            float: none;
+        }
+
+        .navbar .navbar-nav>li>a {
+            transform: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .navbar .navbar-nav>li>a:hover, 
+        .navbar .navbar-nav>li>a:focus {
+            transform: none !important;
+            font-size: inherit !important;
+        }
+
+        .navbar .navbar-nav>li:last-child>a {
+            padding-right: 0 !important;
+        }
+
+        @media (max-width: 767px) {
+            .navbar>.container {
+                display: block;
+            }
+
+            .navbar .navbar-brand {
+                white-space: normal;
+                margin-right: 0;
+                padding-right: 15px;
+            }
+
+            .navbar .navbar-collapse {
+                width: 100% !important;
+            }
+
+            .navbar .navbar-nav {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand page-scroll" href="#page-top">IEEE GLOBECOM 2026 Workshop on AI Flow</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#introduction">About</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#news">News</a>
+                    </li>
+
+                    
+
+                    <li>
+                        <a class="page-scroll" href="#call">Call for
+                            Papers</a>
+                    </li>
+
+
+                    <li>
+                        <a class="page-scroll" href="#organization">Organizers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#program">Schedule</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#speaker">Invited
+                            Speakers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <style>
+            header {
+                background-image: url(files2026/bg2.jpg);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: #0b1020;
+                width: 100vw;
+                max-width: 100vw;
+                color: #fff;
+                text-align: center;
+                padding: 20px 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* Add a dark overlay to improve text readability */
+            header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.4);
+                /* Semi-transparent dark overlay */
+                z-index: 1;
+            }
+
+            .container {
+                position: relative;
+                z-index: 2;
+                /* Place content above the overlay */
+            }
+
+            .intro-heading,
+            .intro-lead-in {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .intro-heading {
+                color: white;
+                font-size: 3.5em;
+                font-weight: bold;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+
+            .intro-lead-in {
+                font-size: 1.8em;
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            header {
+                padding: 0px 0 0px 0;
+                /* Increase top padding */
+            }
+
+            .buttons {
+                margin-top: 0px;
+                position: relative;
+                z-index: 3;
+                /* Ensure button stays above overlay */
+            }
+
+            .btn {
+                margin: 15px 5px;
+                padding: 12px 24px;
+                color: #fff;
+                background-color: rgba(255, 255, 255, 0.15);
+                border: 2px solid rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: inline-block;
+                backdrop-filter: blur(5px);
+            }
+
+            .btn:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            section {
+                position: relative;
+                padding: 0 0 40px;
+                margin: 0;
+            }
+
+            :root {
+                --section-inner-max-width: 1200px;
+                --section-inner-padding-y: 40px;
+                --section-inner-padding-x: 20px;
+                --section-heading-gap: 24px;
+                --section-heading-top-space: 40px;
+                --body-font-size: 1.1em;
+                --body-line-height: 1.8;
+            }
+
+            .overview-section {
+                max-width: var(--section-inner-max-width);
+                margin: 0 auto;
+                padding: 0 var(--section-inner-padding-x) var(--section-inner-padding-y);
+            }
+
+            /* Unified body typography for all sections (based on Call for Papers) */
+            .section-body,
+            .section-body p,
+            .section-body li,
+            .section-body .text-muted,
+            .section-body .affiliation {
+                font-size: var(--body-font-size);
+                line-height: var(--body-line-height);
+            }
+
+            section>.container,
+            #program>#container,
+            #Members>.container {
+                max-width: var(--section-inner-max-width);
+                margin: 0 auto;
+                padding: 0 var(--section-inner-padding-x) var(--section-inner-padding-y);
+            }
+
+            /* Add horizontal line between sections */
+            section:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                right: 0%;
+                height: 1px;
+                background: #e0e0e0;
+            }
+
+            /* Reduce space between section heading and content */
+            .section-heading {
+                text-align: center;
+                margin: var(--section-heading-top-space) 0 var(--section-heading-gap) !important;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            /* Adjust spacing in specific sections */
+            #news,
+            #introduction,
+            #call,
+            #dates,
+            #program,
+            #speaker,
+            #schedule,
+            #organization,
+            #Members {
+                padding-bottom: 40px;
+            }
+        </style>
+        <div class="container overview-section">
+            <div class="intro-text">
+                <div class="intro-heading">
+                    <div>IEEE GLOBECOM 2026 Workshop on AI Flow:</div>
+                    <div>Towards Ubiquitous Intelligence in the Era of Large Foundation Models</div>
+                </div>
+                <div class="intro-lead-in">7 - 11 December 2026 Macau S.A.R., China</div>
+                <!-- <div class="intro-lead-in">The workshop will be held in a hybrid format.</div> -->
+            </div>
+            <!-- <div class="buttons">
+                <a href="index_2024.html" class="btn">ICML 2024</a>
+            </div> -->
+        </div>
+    </header>
+
+        <!-- Introduction Section -->
+    <section id="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">About</h2>
+                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+                </div>
+            </div>
+            <div class="row text-justify section-body">
+                <style>
+                    .overview-section .intro-text {
+                        color: #444;
+                        margin-bottom: 40px;
+                    }
+
+                    .overview-section .questions-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 30px;
+                        margin-top: 40px;
+                    }
+
+                    .overview-section .question-card {
+                        background: #f8f9fa;
+                        border-radius: 12px;
+                        padding: 25px;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .overview-section .question-card:hover {
+                        transform: translateY(-5px);
+                    }
+
+                    .overview-section .question-title {
+                        color: #2c5282;
+                        font-size: 1.2em;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                        border-bottom: 2px solid #4299e1;
+                        padding-bottom: 8px;
+                    }
+
+                    .overview-section .question-content {
+                        color: #4a5568;
+                        line-height: 1.6;
+                    }
+                </style>
+                <div>
+                    <!-- <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Short Abstract</h1>
+                    <div class="intro-text">
+                        Recent years have witnessed the rapid advancements of large foundation models (LFMs) 
+                        and their expanding applications. However, the ubiquitous accessibility of this intelligence 
+                        is constrained by the sheer scale of LFMs that exceed the capabilities of edge devices and communication networks. 
+                        The AI Flow framework aims to tackle this bottleneck through a paradigm shift from the transmission of data bits to adaptive cooperation 
+                        across hierarchical device-edge-cloud networks, with key innovations including familial models, generative data compression, and multi-agent systems. 
+                        These techniques enable scalable, low-latency, and ubiquitous intelligence services, which are expected to play a pivotal role in 6G networks. 
+                        This workshop is designed to foster high-impact interactions between communication and machine learning communities beyond the theoretical 
+                        aspects in communications that are discussed in the main symposium. The interdisciplinary discussion offers a rich source of new problem formulations 
+                        inspired by the rapid advancements of LFMs, which is highly beneficial to the development of the information theory and communication society. 
+                        Attendees of this workshop will have the opportunity to get acquainted with the challenges in the latest LFM applications, laying the foundation 
+                        for timely and valuable research.
+                    </div>
+
+                    <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Background and Motivation</h1> -->
+                    <div class="intro-text">
+                        <p>
+                            The proliferation of large foundation models (LFMs) has ushered in a new epoch of artificial
+                            intelligence (AI), characterized by a wide range of emergent
+                            abilities beyond supervised training. However, a critical bottleneck threatens to stifle the
+                            ubiquitous accessibility of this intelligence:
+                            the sheer scale of LFMs clashes with the hardware constraints of edge devices and the
+                            bandwidth
+                            limitations of communication networks. Traditional paradigms,
+                            focusing on the transmission of raw data, are increasingly inefficient for the transmission
+                            of
+                            intelligence. To address these limitations,
+                            we are witnessing a paradigm shift from the accurate reconstruction of the input bitstream
+                            to AI
+                            Flow.
+                        </p>
+                        <p>
+                            AI Flow envisions a network not as a passive pipe for data, but as a substrate for the
+                            orchestration and emergence of intelligence.
+                            It utilizes a hierarchical device-edge-cloud architecture where cooperative inference is not
+                            a
+                            static compute-then-transmit task but an adaptive process.
+                            In this paradigm, familial models, a model series of varying sizes that share intermediate
+                            features,
+                            can allow cooperative inference between a resource-constrained edge device and a powerful
+                            remote
+                            server,
+                            thus trading data transmission for efficient computation. Furthermore, AI Flow leverages AI
+                            generation techniques to trade computation for bandwidth.
+                            By transmitting compact semantic representations rather than raw high-fidelity data, and
+                            utilizing receiver-side generative models to reconstruct content,
+                            the system achieves ultra-low bitrate transmission that transcends conventional
+                            rate-perception
+                            limits.
+                            The motivation for this workshop is to ground the empirical success of AI technologies in
+                            the
+                            foundations of information theory.
+                        </p>
+                    </div>
+
+                    <!-- <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Relation to Topics Covered by the Symposium</h1>
+                    <div class="intro-text">
+                        This workshop is deeply rooted in the core competencies of GLOBECOM while expanding its application to modern AI challenges. 
+                        The concept of AI Flow naturally maps to several fundamental areas of communications. 
+                        AI Flow replaces raw data transmission with the exchange of prompts, model weights, or semantic feature vectors. 
+                        This transition calls for new communication design principles that explicitly account for perception quality and semantic relevance, 
+                        where the value of transmitted information is evaluated based on its impact on downstream inference and decision-making performance, 
+                        rather than the statistical distribution. Such a task-oriented communication scheme redefines errors as semantic misunderstandings. 
+                        This requires new coding schemes that protect the meaning of the message rather than its bitstream representation, 
+                        aligning with Shannon's Level B (Semantic) and Level C (Effectiveness) problems. Also, 
+                        with the proliferation of Artificial intelligence generated content (AIGC), we will explore how generative models serve as an ultra-low bitrate compression scheme.
+                    </div> -->
+
+                    <!-- <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Problems We Aim to Address</h3>
+
+                    <div class="questions-grid">
+                        <div class="question-card">
+                            <div class="question-title">In-the-wild Adaptation</div>
+                            <div class="question-content">
+                                How can we leverage techniques such as Retrieval-Augmented Generation
+                                (RAG), In-context Learning (ICL), or Fine-tuning (FT) to adapt FMs for specific domains,
+                                such as
+                                drug discovery, education, or clinical health?
+                            </div>
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-title">Reasoning and Planning</div>
+                            <div class="question-content">
+                                How can FMs be enhanced to tackle more complex in-the-wild tasks that
+                                require multi-step reasoning or decision-making, such as multi-hop question answering,
+                                mathematical
+                                problem-solving, theorem proving, code generation, or robot planning scenarios?
+                            </div>
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-title">Reliability and Responsibility</div>
+                            <div class="question-content">
+                                How can FMs work reliably outside their training distribution?
+                                And how can we address issues like hallucination, fairness, ethics, safety and privacy
+                                within the society?
+                            </div>
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-title">Practical Limitations in Deployment</div>
+                            <div class="question-content">
+                                How can FMs tackle challenges in practical applications,
+                                such as system constraints, memory requirements, response time demands, data acquisition
+                                barriers,
+                                and computational costs for inference-time scaling and long-context input?
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <div class="container overview-section">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">News</h2>
+                </div>
+            </div>
+            <div class="row text-justify section-body">
+                <div class="col-md-12">
+                    <ul class="large text-muted" style="float:left; width: 100%">
+                        <li>
+                            Please follow our <a href="https://mp.weixin.qq.com/s/QrFAmGjQvHmgEgX9En4MjQ"
+                                target="_blank">WeChat Official Account</a> for the latest news!
+                        </li>
+                        <li>Check out <a href="https://github.com/TeleAI-AI-Flow" target="_blank"
+                                rel="noopener noreferrer">our GitHub repos</a>.</li>
+                        <!-- 
+                        <li>
+                            GitHub: <a href="https://github.com/TeleAI-AI-Flow" target="_blank" rel="noopener noreferrer">TeleAI-AI-Flow</a>
+                        </li> -->
+                        <li>Explore <a href="https://huggingface.co/TeleAI-AI-Flow" target="_blank"
+                                rel="noopener noreferrer">our models</a> on Hugging Face.</li>
+                        <!-- <li>
+                            
+                            Hugging Face: <a href="https://huggingface.co/TeleAI-AI-Flow" target="_blank" rel="noopener noreferrer">TeleAI-AI-Flow</a>
+                        </li> -->
+                    </ul>
+                </div>
+    </section>
+
+
+
+    <!-- call for papers -->
+    <!-- <section id="call" class="bg-mid-gray"> -->
+    <section id="call">
+        <style>
+            #call .intro-text {
+                color: #444;
+                margin-bottom: 24px;
+            }
+
+            #call .call-subtitle {
+                font-family: 'Georgia', serif;
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+                color: #2c5282;
+                font-weight: 600;
+            }
+
+            #call .call-list {
+                width: 100%;
+                color: #444;
+                padding-left: 22px;
+                margin-bottom: 24px;
+            }
+
+            #call .call-list li {
+                margin-bottom: 0.35rem;
+            }
+        </style>
+        <div class="container overview-section">
+
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading">Call for Papers</h2>
+
+                    <div class="row text-justify">
+                        <div class="col-md-12 section-body">
+
+
+                            <p class="intro-text">
+                                Recent advances in LFMs are rapidly expanding the scope of intelligent applications, yet
+                                the ubiquitous accessibility of this intelligence is constrained by the sheer scale of
+                                LFMs that exceed the capabilities of edge devices and communication networks. The AI
+                                Flow framework aims to tackle this bottleneck through a paradigm shift from the
+                                transmission of data bits to adaptive cooperation across hierarchical device-edge-cloud
+                                networks, with key innovations including large–small familial models, generative data
+                                compression, and multi-agent systems. These advances pave the way for scalable,
+                                low-latency, and ubiquitous intelligent services, offering new problem formulations and
+                                opportunities for the convergence of information theory, communications, and machine
+                                learning.
+                            </p>
+
+                            <div>
+                                <h1 class="call-subtitle">Important Dates</h1>
+
+                                <ul class="call-list">
+                                    <li>
+                                        <span style="font-weight: bold;">Workshop Paper Submission Deadline:</span> 10
+                                        August 2026
+                                    </li>
+                                    <li>
+                                        <span style="font-weight: bold;">Paper Acceptance Notification:</span> 20
+                                        September 2026
+                                    </li>
+                                    <li>
+                                        <span style="font-weight: bold;">Camera Ready:</span> 30 September 2026
+                                    </li>
+                                </ul>
+
+                                <!-- <p style="margin-top: 1.5rem; line-height: 1.5;">
+                                    Deadlines are strict and will not be extended under any circumstances.
+                                </p> -->
+                            </div>
+
+                            <div>
+                                <h1 class="call-subtitle">Submission Site</h1>
+
+                                <p class="intro-text">
+                                    The GLOBECOM EDAS master will provide the submission URL in the near future.
+                                </p>
+                                <div>
+                                    <h1 class="call-subtitle">Scope and Topics of Interests</h1>
+
+                                    <p class="intro-text">As future communication systems evolve toward supporting
+                                        large-scale AI services, conventional bit-level communication abstractions are
+                                        insufficient to capture the requirements of task-oriented, collaborative, and
+                                        adaptive intelligence delivery. This workshop aims to bring together researchers
+                                        and practitioners from information theory, machine learning, and network
+                                        architecture to examine both the fundamental limits and practical system designs
+                                        underpinning this transition. Topics of interest include, but are not limited
+                                        to:</p>
+
+                                    <ul class="call-list">
+                                        <li>Information theory and large language models</li>
+                                        <li>Information-theoretic limits on neural codec and data compression</li>
+                                        <li>Lightweight foundation models and adaptation techniques for edge devices
+                                        </li>
+                                        <li>Distributed fine-tuning of large foundation models over communication
+                                            networks</li>
+                                        <li>Cooperative inference methods across the device-edge-cloud architecture</li>
+                                        <li>Correlation between compression and intelligence for large foundation models
+                                        </li>
+                                        <li>Generative model-assisted ultra-low bitrate transmission for multimodal data
+                                        </li>
+                                        <li>Task-oriented communications for cooperative inference of large foundation
+                                            models</li>
+                                        <li>Multi-agent systems and ensemble learning for large foundation models</li>
+                                        <li>Resource allocation and coordination for the device-edge-cloud architecture
+                                        </li>
+                                        <li>Effective communication protocols for cooperative inference and ensemble
+                                            learning</li>
+                                        <li>Privacy and security assurance in distributed large foundation models</li>
+                                        <li>Case studies and practical implementations of the device-edge-cloud
+                                            cooperation</li>
+                                    </ul>
+                                    <!-- <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                <h1 style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">Submission Guidelines</h1>
+                            <p class="large text-muted">
+                                <mybold>Format:</mybold> &nbsp;All submissions must be a single PDF file. We welcome high-quality original papers in the following two tracks:
+                                <ul class="large text-muted" style="float:left; width: 100%">
+                                    <li style="margin-bottom: 0rem;">
+                                        <span style="font-weight: bold;">Tiny papers:</span> between 2 and 4 pages
+                                    </li>
+                                    <li style="margin-bottom: 0rem;">
+                                        <span style="font-weight: bold;">Long Papers:</span> between 6 and 9 pages
+                                    </li>
+                                </ul>
+                                
+                                References and appendices are not included in the page limit, but the main text must be self-contained. Reviewers are not required to read beyond the main text
+                            </p>
+                            <p class="large text-muted">
+                                <mybold>Style file:</mybold> &nbsp; You must format your submission using the ICLR 2025
+                                LaTeX style file. For your convenience, we have modified the main conference style file
+                                to refer to our workshop: <a href="iclr_fmwild.sty">iclr_fmwild.sty</a>. Please
+                                include the references and supplementary materials in the same PDF.
+                                The maximum file size for submissions is 50MB. Submissions that violate the ICLR style
+                                (e.g., by decreasing margins or font sizes) or page limits may be rejected without
+                                further review.
+                            </p>
+                            <p class="large text-muted">
+                                <mybold>Dual-submission and non-archival policy:</mybold> &nbsp;We welcome ongoing and unpublished work.
+                                We will also accept papers that are under review at the time of submission, or that have
+                                been recently accepted, , provided they do not breach any dual-submission or anonymity policies of those venues. The workshop is a non-archival venue and will not
+                                have official proceedings. Workshop submissions can be subsequently or concurrently
+                                submitted to other venues.
+                            </p>
+                            <p class="large text-muted">
+                                <mybold>Visibility:</mybold> &nbsp; Submissions and reviews will not be public. Only
+                                accepted papers will be made public.
+                            </p>
+                            <p class="large text-muted">
+                                <mybold>Double-blind reviewing:</mybold> &nbsp; All submissions must be anonymized and
+                                may not contain any identifying information that may violate the double-blind reviewing
+                                policy. This policy applies to any supplementary or linked material as well, including
+                                code. If you are including links to any external material, it is your responsibility to
+                                guarantee anonymous browsing. Please do not include acknowledgements at submission time.
+                                If you need to cite one of your own papers, you should do so with adequate anonymization
+                                to preserve double-blind reviewing. Any papers found to be violating this policy will be
+                                rejected.
+                            </p>
+                            <p class="large text-muted">
+                                <mybold>Contact:</mybold> &nbsp; For any questions, please contact us at <a
+                                    href="mailto:fmwild2025@googlegroups.com">fmwild2025@googlegroups.com</a>.
+                            </p>
+                            <br> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <section id="organization">
+        <div class="container overview-section">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Workshop Organizers</h2>
+                </div>
+            </div>
+            <style>
+                .organizer-bio {
+                    display: flex;
+                    align-items: flex-start;
+                    margin-bottom: 40px;
+                    text-align: left;
+                    background: #f8f9fa;
+                    border-radius: 12px;
+                    padding: 25px;
+                }
+
+                .organizer-bio img {
+                    width: 150px;
+                    height: 150px;
+                    margin-right: 30px;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                }
+
+                .organizer-bio .bio-text {
+                    flex-grow: 1;
+                }
+
+                .organizer-bio h4 {
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                    color: #2c5282;
+                    font-size: 1.5em;
+                }
+
+                .organizer-bio .affiliation {
+                    font-style: italic;
+                    color: #666;
+                    margin-bottom: 15px;
+                    font-size: 1.1em;
+                }
+
+                .organizer-bio p {
+                    color: #444;
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: 768px) {
+                    .organizer-bio {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    .organizer-bio img {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            </style>
+
+            <div class="section-body">
+                <div class="organizer-bio">
+                    <img src="./files2026/LXL-.jpg" class="img-responsive img-circle" alt="Xuelong Li"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <div class="bio-text">
+                        <h4>Prof. Xuelong Li</h4>
+                        <div class="affiliation">Institute of Artificial Intelligence (TeleAI), China Telecom, China,
+                            (xuelong_li@ieee.org)</div>
+                        <p>Xuelong Li (IEEE Fellow) is the CTO and Chief Scientist of China Telecom (Fortune Global
+                            500), where he founded the Institute of Artificial Intelligence (TeleAI) of China Telecom.
+                            He is also a "National Distinguished Expert" and a full professor with The Northwestern
+                            Polytechnical University, where he founded the School of Artificial Intelligence, Optics and
+                            Electronics (iOPEN), and the Key Laboratory of Intelligent Interaction and Applications of
+                            the Ministry of Industry and Information Technology of China. Before this, he was a full
+                            professor with the Chinese Academy of Sciences, a Reader in Cognitive Computing with The
+                            University of London, U.K., and a Lecturer in Computer Science at The University of Ulster,
+                            U.K. His papers were cited 90,000+ times by researchers from 2,000+ institutes in 90+
+                            countries. He is a guest editor of 15 special issues, and an editor of academic journals,
+                            including Pattern Recognition (Elsevier)(as an Associate Editor-in-Chief), IEEE Trans. on
+                            Image Processing (IEEE), and ACM Trans. on Knowledge Discovery from Data (ACM), etc. He has
+                            been a chair of conferences for 80+ times, e.g., recently a Sponsorship Chair of AAAI, a PC
+                            Chair of IEEE ICME, etc., and he was/is a PC member for 400+ times.</p>
+                    </div>
+                </div>
+
+                <div class="organizer-bio">
+                    <img src="./files2026/JunZhang-.jpg" class="img-responsive img-circle" alt="Jun Zhang">
+                    <div class="bio-text">
+                        <h4>Prof. Jun Zhang</h4>
+                        <div class="affiliation">Hong Kong University of Science and Technology, Hong Kong, China,
+                            (eejzhang@ust.hk)</div>
+                        <p>Jun Zhang (IEEE Fellow) received the Ph.D. degree in Electrical and Computer Engineering from
+                            the University of Texas at Austin in 2009. He is a Professor in the Department of Electronic
+                            and Computer Engineering at the Hong Kong University of Science and Technology. He is an
+                            IEEE Fellow and was an IEEE ComSoc Distinguished Lecturer (2023-2024). His research
+                            interests include mobile edge computing, edge AI, and cooperative AI. Dr. Zhang
+                            co-authored/co-edited five books including "Fundamentals of LTE" (Prentice-Hall, 2010). He
+                            is a co-recipient of several best paper awards, including the 2025 IEEE Communications
+                            Society Katherine Johnson Young Author Best Paper Award, the 2021 Best Survey Paper Award of
+                            the IEEE Communications Society, etc. He is currently an Area Editor of IEEE Transactions on
+                            Wireless Communications (leading the area of Machine Learning and Artificial Intelligence)
+                            and IEEE Transactions on Machine Learning in Communications and Networking (leading the area
+                            of Distributed Learning and AI at the Network Edge). He served as a symposium co-chair for
+                            IEEE Wireless Communications and Networking Conference (WCNC) 2011 and 2026, IEEE
+                            International Conference on Communications (ICC) 2021, and a TPC co-chair for The IEEE Hong
+                            Kong 6G Wireless Summit 2023, 2024.</p>
+                    </div>
+                </div>
+
+                <div class="organizer-bio">
+                    <img src="./files2026/SJW-.jpg" class="img-responsive img-circle" alt="Jiawei Shao"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <div class="bio-text">
+                        <h4>Dr. Jiawei Shao</h4>
+                        <div class="affiliation">Institute of Artificial Intelligence (TeleAI), China Telecom, China,
+                            (shaojw2@chinatelecom.cn)</div>
+                        <p>Jiawei Shao is currently a research scientist at the Institute of Artificial Intelligence
+                            (TeleAI), China Telecom. He is a principal investigator leading the AI Flow group. His
+                            research focuses on a wide range of topics, including large language models, edge AI,
+                            generative AI, and agentic AI. He received his Ph.D. from the Hong Kong University of
+                            Science and Technology (HKUST). He is a recipient of several awards, including the IEEE
+                            Communications Society Katherine Johnson Young Author Best Paper Award and the HKUST SENG
+                            PhD Research Excellence Award. He has published more than 40 research papers in top-tier
+                            journals and conferences, including Nature Communications and Nature Machine Intelligence.
+                            He is selected for inclusion in the World's Top 2% Scientists list for single-year impact in
+                            2024. He has been a guest editor of 2 special issues and a reviewer for top-tier
+                            journals/conferences, including IEEE International Symposium on Information Theory (ISIT),
+                            IEEE Journal on Selected Areas in Communications (JSAC), IEEE Transactions on Wireless
+                            Communications (TWC), Annual Conference on Neural Information Processing System (NeurIPS),
+                            and International Conference on Machine Learning (ICML). He helped organize the IEEE Hong
+                            Kong 6G Summit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Program Section -->
+    <section id="program">
+        <style>
+            /* Scope all styles to the program section */
+            #program {
+                color: #333;
+            }
+
+            #program .section-heading {
+                text-align: center;
+                color: #333;
+            }
+
+            #program .text-muted {
+                color: #666;
+                text-align: center;
+                font-style: italic;
+                margin: 1rem 0 2rem;
+            }
+
+
+
+            #program h3 {
+                color: #2c5282;
+                margin: 2rem 0 1rem;
+            }
+
+            #program .table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1rem 0 2rem;
+            }
+
+            #program .table td {
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+            }
+
+            #program .table tr:nth-child(even) {
+                background-color: #f8f9fa;
+            }
+
+            /* Special session highlights */
+            #program .table tr:has(td:contains("Break")) {
+                background-color: #ebf4ff;
+            }
+
+            #program .table tr:has(td:contains("Poster Session")) {
+                background-color: #f0fff4;
+            }
+
+            /* Time column */
+            #program .table td:first-child {
+                width: 140px;
+                font-weight: 500;
+                color: #2d3748;
+            }
+
+            #program .centered {
+                margin: 0 auto;
+            }
+        </style>
+        <div id="container" class="overview-section section-body">
+
+            <h2 class="section-heading">Schedule</h2>
+            <p class="text-muted">TBD</p>
+
+            <!--
+            <p class="text-muted">This is the tentative schedule of the workshop. All slots are provided in local time.
+            </p>
+
+            <div id="schedule">
+                <div class="centered">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>09:00 - 09:15</td>
+                                <td>Opening Remarks</td>
+                            </tr>
+                            <tr>
+                                <td>09:15 - 10:00</td>
+                                <td>Keynote Session I</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 - 10:45</td>
+                                <td>Keynote Session II</td>
+                            </tr>
+                            <tr>
+                                <td>10:45 - 11:00</td>
+                                <td>Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 - 11:30</td>
+                                <td>Panel Discussion I</td>
+                            </tr>
+                            <tr>
+                                <td>11:30 - 12:30</td>
+                                <td>Technical Session I (4 presentations)</td>
+                            </tr>
+                            <tr>
+                                <td>12:30 - 14:00</td>
+                                <td>Lunch Break</td>
+                            </tr>
+                            <tr>
+                                <td>14:00 - 14:45</td>
+                                <td>Keynote Session III</td>
+                            </tr>
+                            <tr>
+                                <td>14:45 - 15:30</td>
+                                <td>Keynote Session IV</td>
+                            </tr>
+                            <tr>
+                                <td>15:30 - 15:45</td>
+                                <td>Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td>15:45 - 16:15</td>
+                                <td>Panel Discussion II</td>
+                            </tr>
+                            <tr>
+                                <td>16:15 - 17:15</td>
+                                <td>Technical Session II (4 presentations)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- Speaker Section -->
+    <section id="speaker">
+        <style>
+            /* Add these styles to your existing style section */
+
+            /* Speakers Grid - 4x2 */
+            .speakers-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+                width: 100%;
+                padding: 0 40px;
+            }
+
+            .speakers-grid .team-member {
+                text-align: center;
+            }
+
+            .speakers-grid .team-member img {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+
+            /* Organizers Grid - 5x3 */
+            .organizers-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+                width: 100%;
+                padding: 0 40px;
+            }
+
+            .organizers-grid .team-member {
+                text-align: center;
+            }
+
+            .organizers-grid .team-member img {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+
+            /* Keep circular images */
+            .img-circle {
+                border-radius: 50%;
+            }
+
+            /* Remove existing column classes effects for these sections */
+            #speaker .col-sm-2 {
+                width: auto;
+                padding: 0;
+            }
+
+            #organization .col-sm-2 {
+                width: auto;
+                padding: 0;
+            }
+
+            #speaker .text-muted {
+                color: #666;
+                text-align: center;
+                font-style: italic;
+                margin: 1rem 0 2rem;
+            }
+        </style>
+        <div class="container overview-section section-body">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading text-center">Invited Speakers</h2>
+                </div>
+            </div>
+            <p class="text-muted">TBD</p>
+
+            <!--
+            <div class="speakers-grid"
+                style="grid-template-columns: repeat(4, 1fr); max-width: 1000px; margin: 0 auto;">
+                <div class="team-member">
+                    <img src="./files2026/BC.jpeg" class="img-responsive img-circle"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <h4>Angela Yingjun Zhang</h4>
+                    <p class="text-muted">Chinese Univ. Hong Kong</p>
+                </div>
+                <div class="team-member">
+                    <img src="./files2026/BC.jpeg" class="img-responsive img-circle"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <h4>Shuicheng Yan</h4>
+                    <p class="text-muted">Nat. Univ. Singapore</p>
+                </div>
+                <div class="team-member">
+                    <img src="./files2026/BC.jpeg" class="img-responsive img-circle"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <h4>Kaibin Huang</h4>
+                    <p class="text-muted">Hong Kong Univ.</p>
+                </div>
+                <div class="team-member">
+                    <img src="./files2026/BC.jpeg" class="img-responsive img-circle"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <h4>Dacheng Tao</h4>
+                    <p class="text-muted">Nanyang Technol. Univ.</p>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </section>
+
+    <section id="Members">
+        <style>
+            #Members .text-muted {
+                color: #666;
+                text-align: center;
+                font-style: italic;
+                margin: 1rem 0 2rem;
+            }
+        </style>
+        <div class="container overview-section section-body">
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <h2 class="section-heading text-center">Program Committee Members</h2>
+                    </div>
+                </div>
+            </div>
+            <p class="text-muted">TBD</p>
+            <!-- <div class="speakers-grid"
+                style="grid-template-columns: repeat(2, 1fr); max-width: 600px; margin: 0 auto; padding: 0;">
+                <div class="team-member">
+                    <img src="./files2026/BC.jpeg" class="img-responsive img-circle"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <h4>Cheng Yuan</h4>
+                    <p class="text-muted">Institute of Artificial Intelligence (TeleAI), China Telecom, China</p>
+                </div>
+                <div class="team-member">
+                    <img src="./files2026/BC.jpeg" class="img-responsive img-circle"
+                        onerror="this.src='./img/default-avatar.png';">
+                    <h4>Jiangjing Hu</h4>
+                    <p class="text-muted">Institute of Artificial Intelligence (TeleAI), China Telecom, China</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- <section id="sponsor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Workshop Sponsors</h2>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row row-centered ">
+                <div class="col-sm-2">
+                    <div class="team-member">
+                        <img src="./files_new/foundry.png" height="150" width="250">
+                        <a href="https://www.mlfoundry.com/">
+                            <h4 style="text-align: center;">Foundry</h4>
+                        </a>
+                    </div>
+                </div> -->
+
+
+    <!-- <section id="contactt">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2 class="section-heading">Contact</h2>
+                                            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                                            <p class="large text-muted">
+
+                                                Please contact if you have any questions.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+    </section>-->
+
+
+
+
+
+
+    <!--     <section id="contact">
+        <br class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="section-heading">Sponsored by</h3>
+            </div>
+        </div>
+        <div class="center">
+            <center>
+            <a >
+                <img src="img/logo2x.png" class="center" alt="" height="120" usemap="#planetmap">
+                <map name="planetmap">  
+                     
+                   <area shape="rect" coords="0,0,250,250" alt="Sun" href="https://realai.ai">  
+                    
+                 </map>  
+            </a>
+                
+            </center>
+        </div> -->
+
+
+
+    <!-- </div> -->
+    <!-- </section> -->
+<!-- 
+    <footer style="padding: 24px 0; text-align: center; color: #666; font-size: 14px; border-top: 1px solid #e5e5e5;">
+        Copyright © 2026 TeleAI. All rights reserved.
+    </footer> -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="./files2026/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./files2026/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./files2026/jquery.easing.min.js"></script>
+    <script src="./files2026/classie.js"></script>
+    <script src="./files2026/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- <script src="./files2026/contact_me.js"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./files2026/agency.js"></script>
+
+
+
+
+</body>
+
+</html>
