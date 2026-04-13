@@ -52,10 +52,12 @@
             align-items: center;
             justify-content: flex-end;
             width: 100%;
+            flex-wrap: nowrap;
         }
 
         .navbar .navbar-nav>li {
             float: none;
+            white-space: nowrap;
         }
 
         .navbar .navbar-nav>li>a {
@@ -71,6 +73,24 @@
 
         .navbar .navbar-nav>li:last-child>a {
             padding-right: 0 !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .navbar>.container {
+                gap: 10px;
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .navbar .navbar-brand {
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            .navbar .navbar-nav>li>a {
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+                font-size: 13px !important;
+            }
         }
 
         @media (max-width: 767px) {
@@ -828,8 +848,7 @@
                             journals/conferences, including IEEE International Symposium on Information Theory (ISIT),
                             IEEE Journal on Selected Areas in Communications (JSAC), IEEE Transactions on Wireless
                             Communications (TWC), Annual Conference on Neural Information Processing System (NeurIPS),
-                            and International Conference on Machine Learning (ICML). He helped organize the IEEE Hong
-                            Kong 6G Summit.</p>
+                            and International Conference on Machine Learning (ICML). </p>
                     </div>
                 </div>
             </div>
